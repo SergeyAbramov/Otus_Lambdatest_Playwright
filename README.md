@@ -2,13 +2,17 @@
 
 // This is my project created in the Qtus QA JS automation course
 
-// I've created the few tests of the e-shop https://ecommerce-playground.lambdatest.io/index.php?route=common/home
+// I've created a few tests of the e-shop https://ecommerce-playground.lambdatest.io/index.php?route=common/home
 
-// To start the tests just run >>> npx playwright test // in cli >>> it will run all the tests in all the browsers in headles mode
+// Added the Allure reporter 
 
-// To generat the allure report >>> allure generate -c // in cli
+// Added the GitHub Actions workflow by pull requests and cron om every monday
 
-// To open the allure reporter >>> allure open // in cli
+// To start the tests just run >>> npx playwright test // in cli >>> it will run all the tests in all the browsers in headless mode
+
+// To generate the allure report run >>> allure generate -c // in cli
+
+// To open the allure reporter run >>> allure open // in cli
 
 // To run a selected test run >>> npx playwright test lambdatest_first.spec.js --headed --project=chrome // in cli >>> it will run selected test in selected browser
 

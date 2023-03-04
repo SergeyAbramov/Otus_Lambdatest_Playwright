@@ -45,7 +45,7 @@ test.describe('Test of the login page', () => {
         await TestLoginPage.loginFlow();
         await page.waitForLoadState('networkidle');
         await expect(page).toHaveTitle('My Account');
-        await page.screenshot({path: 'playwright-report/account_login_ok.png', fullPage: true});
+        await page.screenshot({path: './playwright-report/account_login_ok.png', fullPage: true});
         // Logout >>>
         await page.locator('#column-right > div > a:nth-child(14)').click();
         await page.waitForLoadState('networkidle');
