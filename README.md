@@ -10,5 +10,5 @@
 
 // To open the allure reporter >>> allure open // in cli
 
-// To run a specifik test run >>> npx playwright test lambdatest_first.spec.js --headed --project=chrome // in cli >>> it will run selected test in selected browser
+// To run a selected test run >>> npx playwright test lambdatest_first.spec.js --headed --project=chrome // in cli >>> it will run selected test in selected browser
 
