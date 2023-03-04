@@ -8,6 +8,8 @@
 
 // Added the GitHub Actions workflow by pull requests and cron om every monday
 
+// Added the Telegram notification about the new commit
+
 // To start the tests just run >>> npx playwright test // in cli >>> it will run all the tests in all the browsers in headless mode
 
 // To generate the allure report run >>> allure generate -c // in cli
