@@ -9,21 +9,20 @@ exports.CartPage = class CartPage {
         this.use_coupon_field = page.getByPlaceholder('Enter your coupon here');
         this.apply_coupon_btn = page.getByRole('button', { name: 'Apply Coupon' });
         this.checkout_btn = page.getByRole('link', { name: 'Checkout' });
-        
-
-        
+            
 
     }
-    async useCoupon(){
-            await this.use_coupon.click();
-    }async useCouponField(){
+    async useCoupon_click(){
+        await this.use_coupon.click();
+    }
+    async useCouponField_fill(){
         await this.use_coupon_field.click();
         await this.use_coupon_field.fill('50%OFF');
     }
-    async applyCouponBtn(){
+    async applyCouponBtn_click(){
         await this.apply_coupon_btn.click();
     }
-    async checkoutButton(){
+    async checkoutButton_click(){
         await this.checkout_btn.click();
     }
     

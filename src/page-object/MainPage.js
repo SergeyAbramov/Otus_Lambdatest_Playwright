@@ -14,13 +14,13 @@ exports.MainPage = class MainPage {
     await this.page.goto('https://ecommerce-playground.lambdatest.io/');
     await expect(this.page).toHaveTitle('Your Store');
     }
-    async searchBar(){
+    async searchBar_click(){
             await this.search_bar.click();
     }
-    async searchButton(){
+    async searchButton_click(){
         await this.search_button.click();
     }
-    async searchBarFill(){
+    async searchBar_fill(){
         await this.search_bar.fill('Mac book pro');
     }
     

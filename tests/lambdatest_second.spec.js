@@ -33,7 +33,7 @@ test.describe('Tests of the registration form for the new account', () => {
         await expect(page).toHaveTitle('My Account');
 
     })
-    test.only('The form validation fields > expect that the correct warnings are shown > unable to register with the invalid data', async ({page}) => {
+    test('The form validation fields > expect that the correct warnings are shown > unable to register with the invalid data', async ({page}) => {
 
         const checkoutPage = new CheckoutPage(page); 
         const registerAccountPage = new RegisterAccountPage(page);

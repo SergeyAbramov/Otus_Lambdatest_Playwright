@@ -1,5 +1,5 @@
 
-const { test, expect } = require('@playwright/test');
+const { expect } = require('@playwright/test');
 
 
 exports.RegisterAccountPage = class RegisterAccountPage {

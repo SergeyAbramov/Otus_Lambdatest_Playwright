@@ -3,7 +3,7 @@ import { CartPage } from '../src/page-object/CartPage';
 import { CheckoutPage } from '../src/page-object/CheckoutPage';
 const { MainPage } = require('../src/page-object/MainPage');
 
-test.describe('Homework Основные сценарии использования Playwright',
+test.describe('Happy customer path > user is able to search for goods and place the order',
 () => {
 
     test.use({
@@ -21,10 +21,10 @@ test.describe('Homework Основные сценарии использован
         
         // Go to test site
         await TestPage.goto();
-        await TestPage.searchBar();
+        await TestPage.searchBar_click();
         // Search for MacBook
-        await TestPage.searchBarFill();
-        await TestPage.searchButton();
+        await TestPage.searchBar_fill();
+        await TestPage.searchButton_click();
         // Search results page
         await expect(page).toHaveTitle('Search - Mac book pro');
         // Add the first item in the cart
@@ -34,20 +34,19 @@ test.describe('Homework Основные сценарии использован
         // Click view cart
         await expect(page.getByText('Success: You have added MacBook Pro to your shopping cart!')).toBeVisible();
         await page.getByRole('link', { name: 'View Cart ' }).click();
-
         // CartPage
         await expect(page).toHaveTitle('Shopping Cart');
         // On the cart page try to apply coupon
-        await ShopCartPage.useCoupon();
-        await ShopCartPage.useCouponField();
-        await ShopCartPage.applyCouponBtn();
+        await ShopCartPage.useCoupon_click();
+        await ShopCartPage.useCouponField_fill();
+        await ShopCartPage.applyCouponBtn_click();
         // Expect that error is shown
         await expect(page.locator('//*[@class="alert alert-danger alert-dismissible"]')).toHaveText('Warning: Coupon is either invalid, expired or reached its usage limit! ×');
         // Go to checkout
-        await ShopCartPage.checkoutButton();
+        await ShopCartPage.checkoutButton_click();
         await expect(page).toHaveTitle('Checkout');
-        // Fill all the data > click continue
-        await CheckOutPage.guestCheckout();
+        // Fill all the data >>> click continue
+        await CheckOutPage.guestCheckout_click();
         await CheckOutPage.firstNameField_fill();
         await CheckOutPage.lastNameField_fill();
         await CheckOutPage.emailField_fill();
@@ -55,8 +54,8 @@ test.describe('Homework Основные сценарии использован
         await CheckOutPage.addressField_fill();
         await CheckOutPage.cityField_fill();
         await CheckOutPage.postCodeField_fill();
-        await CheckOutPage.termsCheckmark();
-        await CheckOutPage.continueButton();
+        await CheckOutPage.termsCheckmark_click();
+        await CheckOutPage.continueButton_click();
         // Confirm order screen is shown
         await expect(page).toHaveTitle('Confirm Order');
         // Take a page screenshot

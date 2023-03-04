@@ -19,7 +19,7 @@ exports.CheckoutPage = class CheckoutPage {
         this.continue_btn = page.getByRole('button', { name: 'Continue ' });
 
     }
-    async guestCheckout(){
+    async guestCheckout_click(){
         await this.guest_checkout.click();
     }
     async firstNameField_fill(){
@@ -52,10 +52,10 @@ exports.CheckoutPage = class CheckoutPage {
         await this.post_code.click();
         await this.post_code.fill(faker.address.zipCode());
     }
-    async termsCheckmark(){
+    async termsCheckmark_click(){
         await this.terms_checkmark.click();
     }
-    async continueButton(){
+    async continueButton_click(){
         await this.continue_btn.click();
     }
     async first_name_click(){
