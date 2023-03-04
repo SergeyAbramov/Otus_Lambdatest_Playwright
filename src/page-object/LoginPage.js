@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+import { faker } from '@faker-js/faker';
 
 exports.LoginPage = class LoginPage {
 
@@ -23,12 +24,12 @@ exports.LoginPage = class LoginPage {
     async incorrectEmail_fill() {
         await this.email_txt_field.click();
         await this.email_txt_field.clear();
-        await this.email_txt_field.fill('this is incorrect email');
+        await this.email_txt_field.fill(faker.lorem.word(10));
     }
     async incorrectPassword_fill() {
         await this.password_txt_field.click();
         await this.password_txt_field.clear();
-        await this.password_txt_field.fill('this is incorrect password');
+        await this.password_txt_field.fill(faker.lorem.word(4));
     }
     async loginButton_click() {
         await this.login_btn.click();
