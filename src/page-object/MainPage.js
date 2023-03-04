@@ -21,6 +21,7 @@ exports.MainPage = class MainPage {
         await this.search_button.click();
     }
     async searchBar_fill(){
+        await this.search_bar.click();
         await this.search_bar.fill('Mac book pro');
     }
     
