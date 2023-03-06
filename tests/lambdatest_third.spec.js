@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import { LoginPage } from '../src/page-object/LoginPage';
 
 
-test.describe('Test of the login page', () => {
+test.describe('Тест логин формы зарегестрированного ранее пользователя и невозможности залогиниться незарегестрированному пользователю', () => {
     test.use({
         viewport: {
             height: 950,

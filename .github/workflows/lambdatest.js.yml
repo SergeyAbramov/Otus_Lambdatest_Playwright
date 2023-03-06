@@ -38,10 +38,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: test-report
-        path: ./playwright-report
+        path: ./allure-report
         retention-days: 5
 
-    - name: send telegram message on push
+    - name: Send telegram message on push
       uses: appleboy/telegram-action@master
       with:
               to: ${{ secrets.TELEGRAM_TO }}

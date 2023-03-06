@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import { CheckoutPage } from '../src/page-object/CheckoutPage';
 const { RegisterAccountPage } = require('../src/page-object/RegisterAccountPage');
 
-test.describe('Tests of the registration form for the new account', () => {
+test.describe('Тест формы регистрации нового пользователя', () => {
     
     test.use({
         viewport: {
@@ -17,8 +17,10 @@ test.describe('Tests of the registration form for the new account', () => {
         const registerAccountPage = new RegisterAccountPage(page);
 
         await registerAccountPage.goto();
+        // Заполняем first last name
         await checkoutPage.firstNameField_fill();
         await checkoutPage.lastNameField_fill();
+        // Заполняем email phone
         await checkoutPage.emailField_fill();
         await checkoutPage.phoneField_fill();
 

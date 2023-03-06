@@ -6,9 +6,9 @@
 
 // Added the Allure reporter 
 
-// Added the GitHub Actions workflow by pull requests and cron om every monday
+// Added the GitHub Actions workflow by pull requests and cron on every monday
 
-// To start the tests just run >>> npx playwright test // in cli >>> it will run all the tests in all the browsers in headless mode
+// To start the tests run >>> npx playwright test // in cli >>> it will run all the tests from the tests dir >>> in all the browsers in headless mode
 
 // To generate the allure report run >>> allure generate -c // in cli
 
