@@ -9,14 +9,14 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-      - cron: "0 10 * * 1"
+      - cron: "0 8 * * 1"
     
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    continue-on-error: true
+    continue-on-error: false
 
     strategy:
       matrix:
