@@ -15,7 +15,7 @@ test.describe('Тест верхнего навигационного меню',
         const list = page.locator('#widget-navbar-217841 > ul');
 
         await testPage.goto();
-        await page.pause();
+    
         await testPage.shop_by_link_click();
         await expect(page.getByRole('heading', { name: 'Top categories close' })).toBeVisible();
 
@@ -26,6 +26,7 @@ test.describe('Тест верхнего навигационного меню',
         await testPage.special_btn_click();
 
         await testPage.blog_btn_click();
+        await page.waitForLoadState();
 
         await testPage.mega_menu_hover();
 
