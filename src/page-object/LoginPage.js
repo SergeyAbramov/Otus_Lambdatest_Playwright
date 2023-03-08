@@ -17,11 +17,11 @@ exports.LoginPage = class LoginPage {
     }
     async emailField_fill() {
         await this.email_txt_field.click();
-        await this.email_txt_field.fill(TEST_EMAIL);
+        await this.email_txt_field.fill(process.env.TEST_EMAIL);
     }
     async passwordField_fill() {
         await this.password_txt_field.click();
-        await this.password_txt_field.fill(TEST_PASSWORD);
+        await this.password_txt_field.fill(process.env.TEST_PASSWORD);
     }
     async incorrectEmail_fill() {
         await this.email_txt_field.click();
@@ -38,9 +38,9 @@ exports.LoginPage = class LoginPage {
     }
     async loginFlow() {
         await this.email_txt_field.click();
-        await this.email_txt_field.fill(TEST_EMAIL);
+        await this.email_txt_field.fill(process.env.TEST_EMAIL);
         await this.password_txt_field.click();
-        await this.password_txt_field.fill(TEST_PASSWORD);
+        await this.password_txt_field.fill(process.env.TEST_PASSWORD);
         await this.login_btn.click();
     }
 }

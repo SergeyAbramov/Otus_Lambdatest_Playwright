@@ -47,8 +47,8 @@ test.describe('Тест формы регистрации нового поль�
         await checkoutPage.emailField_fill();
         await checkoutPage.phoneField_fill();
 
-        await registerAccountPage.password_field_fill(TEST_PASSWORD);
-        await registerAccountPage.password_confirm_field_fill(TEST_PASSWORD);
+        await registerAccountPage.password_field_fill(process.env.TEST_PASSWORD);
+        await registerAccountPage.password_confirm_field_fill(process.env.TEST_PASSWORD);
 
         await registerAccountPage.continue_btn_click();
         await expect(page.locator('//*[@class="alert alert-danger alert-dismissible"]')).toHaveText('Warning: You must agree to the Privacy Policy!');
@@ -77,7 +77,7 @@ test.describe('Тест формы регистрации нового поль�
         await registerAccountPage.continue_btn_click();
         await expect(page.locator('#content > form > fieldset:nth-child(2) > div:nth-child(2) > div > div')).toHaveText('Password must be between 4 and 20 characters!');
         await expect(page.locator('#content > form > fieldset:nth-child(2) > div:nth-child(3) > div > div')).toHaveText('Password confirmation does not match password!');
-        await registerAccountPage.password_field_fill(TEST_PASSWORD);
+        await registerAccountPage.password_field_fill(process.env.TEST_PASSWORD);
 
         await registerAccountPage.continue_btn_click();
 
