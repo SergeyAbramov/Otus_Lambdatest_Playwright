@@ -5,9 +5,9 @@ name: E2E Lambdatest_Playwright
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "dev_dot_env" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "dev_dot_env" ]
   schedule:
       - cron: "0 8 * * 1"
     
