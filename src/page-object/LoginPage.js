@@ -1,5 +1,7 @@
 const { expect } = require('@playwright/test');
 import { faker } from '@faker-js/faker';
+require('dotenv').config()
+
 
 exports.LoginPage = class LoginPage {
 
@@ -15,11 +17,11 @@ exports.LoginPage = class LoginPage {
     }
     async emailField_fill() {
         await this.email_txt_field.click();
-        await this.email_txt_field.fill('Kennedi46@hotmail.com');
+        await this.email_txt_field.fill(process.env.TEST_EMAIL);
     }
     async passwordField_fill() {
         await this.password_txt_field.click();
-        await this.password_txt_field.fill('Qwerty1');
+        await this.password_txt_field.fill(process.env.TEST_PASSWORD);
     }
     async incorrectEmail_fill() {
         await this.email_txt_field.click();
@@ -36,9 +38,9 @@ exports.LoginPage = class LoginPage {
     }
     async loginFlow() {
         await this.email_txt_field.click();
-        await this.email_txt_field.fill('Kennedi46@hotmail.com');
+        await this.email_txt_field.fill(process.env.TEST_EMAIL);
         await this.password_txt_field.click();
-        await this.password_txt_field.fill('Qwerty1');
+        await this.password_txt_field.fill(process.env.TEST_PASSWORD);
         await this.login_btn.click();
     }
 }
