@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
 import { faker } from '@faker-js/faker';
-require('dotenv').config()
+require('dotenv').config();
 
 
 exports.LoginPage = class LoginPage {

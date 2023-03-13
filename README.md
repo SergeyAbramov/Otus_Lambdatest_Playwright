@@ -6,6 +6,8 @@
 
 // Added the Allure reporter 
 
+// Added .env file to store all environment variables
+
 // Added the GitHub Actions workflow by pull requests and cron om every monday
 
 // Added the Telegram notification about the new commit
