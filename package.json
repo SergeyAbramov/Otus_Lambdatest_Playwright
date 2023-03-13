@@ -1,16 +1,16 @@
 {
   "name": "otus_lambdatest_playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project created during the Otus JavaScript QA Engineer course",
   "main": "index.js",
   "scripts": {
     "test": "playwright test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sergey Abramov",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^7.6.0", 
     "@playwright/test": "^1.31.2",
     "allure-playwright": "^2.1.0"
   },

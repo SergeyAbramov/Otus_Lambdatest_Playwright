@@ -59,7 +59,7 @@ test.describe('Happy customer path > user is able to search for goods and place 
         // Confirm order screen is shown
         await expect(page).toHaveTitle('Confirm Order');
         // Take a page screenshot
-        await page.screenshot({path: './playwright-report/order_screenshot' + Date.toString + '.png', fullPage: true});
+        await page.screenshot({path: './playwright-report/order_screenshot'+Date.toString+'.png', fullPage: true});
 
         await page.getByRole('button', { name: 'Confirm Order ' }).click();
         // Order success screen
