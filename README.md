@@ -8,7 +8,7 @@
 
 // Added .env file to store all environment variables
 
-// Added the GitHub Actions workflow by pull requests and cron om every monday
+// Added the GitHub Actions workflow by pull requests and cron on every monday
 
 // Added the Telegram notification about the new commit
 
